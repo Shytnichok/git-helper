@@ -1,7 +1,7 @@
 # git-helper
 
 
-[Шпаргалка по оформлению README на GitHub](https://gist.github.com/fomvasss/8dd8cd7f88c67a4e3727f9d39224a84c)
+[Шпаргалка по оформлению README на GitHub](https://gist.github.com/fomvasss/8dd8cd7f88c67a4e3727f9d39224a84c)  
 [Гайд от MarkDown для оформлению README на GitHub](https://www.markdownguide.org/cheat-sheet/)
 
 
@@ -73,11 +73,11 @@
 
 ```mermaid
 graph LR;
-  untracked (неотслеживаемый) -- "git add" --> staged (в списке на коммит) +tracked;
-  staged    -- "git commit"     --> tracked/comitted (отслеживаемый);
-  tracked/comitted (отслеживаемый)    -- "Изменения"     --> modified (измененный);
-  modified (измененный)    -- "git add"     --> staged (в списке на коммит) +tracked;
-  staged (в списке на коммит) +tracked    -- "Изменения"     --> modified (измененный);
+  untracked -- "git add" --> staged +tracked;
+  staged +tracked -- "git commit" --> tracked/comitted;
+  tracked/comitted -- "edits" --> modified;
+  modified -- "git add" --> staged +tracked;
+  staged +tracked -- "edits"     --> modified;
 
 
 %% стрелка без текста для примера: 
